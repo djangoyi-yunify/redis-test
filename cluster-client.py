@@ -70,7 +70,7 @@ def redis_test(cluster: redis.RedisCluster, limit: int):
     i = 1
     w = 0
     while i <= limit:
-        if i % 50 == 0 and i != 0:
+        if i % 50 == 0:
             print(f"i = {i}, {round(i/limit*100, 2)}%")
         
         try:
