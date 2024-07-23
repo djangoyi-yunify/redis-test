@@ -60,7 +60,7 @@ def redis_run(cluster: redis.RedisCluster):
             key = f"test{cnt}"
             cluster.set(key, cnt)
             value = cluster.get(key)
-            print(f"{key}: {value}")
+            print(f"{key}: {value}, {datetime.datetime.now()}")
             cnt += 1
         except Exception as e:
             print(f"fail to write key: {key} at {datetime.datetime.now()}, wait and retry ... {e}")
