@@ -82,7 +82,7 @@ def redis_test(cluster: redis.RedisCluster, limit: int):
                 w += 1
             i += 1
         except Exception as e:
-            print(f"ail to read key: {key} at {datetime.datatime.now()}, wati and retry ... {e}")
+            print(f"fail to read key: {key} at {datetime.datatime.now()}, wait and retry ... {e}")
             time.sleep(1)
         time.sleep(0.1)
 
@@ -94,7 +94,7 @@ HELPER_MSG = '''
 run: write and read keys for testing
     run
     run <password>
-test: test key-existance, from test0 to test<num>
+test: test key-existance, from test1 to test<num>
     test <num>
     test <num> <password>
 '''
