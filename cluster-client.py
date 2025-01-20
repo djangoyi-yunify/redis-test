@@ -78,6 +78,7 @@ def redis_test(cluster: redis.RedisCluster, limit: int):
             value = cluster.get(key)
             if value is None:
                 w += 1
+                print(key)
             elif int(value) != i:
                 w += 1
             i += 1
